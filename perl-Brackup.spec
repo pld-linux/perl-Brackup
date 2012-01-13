@@ -8,13 +8,13 @@
 Summary:	Brackup - flexible backup tool: slices, dices, encrypts, and sprays across the net
 Summary(pl.UTF-8):	Brackup - elastyczne narzędzie backupowe: rozdziela, szyfruje i rozprzestrzenia po sieci
 Name:		perl-Brackup
-Version:	1.09
+Version:	1.10
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/B/BR/BRADFITZ/%{pdir}-%{version}.tar.gz
-# Source0-md5:	5eaf819f91843d47fdbf300f4d31bbf8
+# Source0-md5:	fe68e7f06c902dd638c0f456d7b291a5
 URL:		http://search.cpan.org/dist/Brackup/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -79,6 +79,8 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/Brackup/Target/Filebased.pm
 %{perl_vendorlib}/Brackup/Target/Filesystem.pm
 %{perl_vendorlib}/Brackup/Target/Ftp.pm
+%{perl_vendorlib}/Brackup/Target/GoogleAppEngine.pm
+%{perl_vendorlib}/Brackup/Target/Riak.pm
 %{perl_vendorlib}/Brackup/Target/Sftp.pm
 %dir %{perl_vendorlib}/Brackup/Manual
 %{perl_vendorlib}/Brackup/Manual/Overview.pod
@@ -89,6 +91,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/Brackup.3pm*
 %{_mandir}/man3/Brackup::Target.3pm*
 %{_mandir}/man3/Brackup::Config.3pm*
+%{_mandir}/man3/Brackup::Dict::Null.3pm*
+%{_mandir}/man3/Brackup::Dict::SQLite.3pm*
+%{_mandir}/man3/Brackup::Dict::SQLite2.3pm*
 %{_mandir}/man3/Brackup::DigestCache.3pm*
 %{_mandir}/man3/Brackup::InventoryDatabase.3pm*
 %{_mandir}/man3/Brackup::Manual::Overview.3pm*
@@ -97,7 +102,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/Brackup::Mount.3pm*
 %{_mandir}/man3/Brackup::Target::CloudFiles.3pm*
 %{_mandir}/man3/Brackup::Target::Ftp.3pm*
+%{_mandir}/man3/Brackup::Target::GoogleAppEngine.3pm*
 %{_mandir}/man3/Brackup::Target::Sftp.3pm*
+%{_mandir}/man3/Brackup::Target::Riak.3pm*
 
 %files Target-Amazon
 %defattr(644,root,root,755)
