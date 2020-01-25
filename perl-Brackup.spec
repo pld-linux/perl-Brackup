@@ -3,7 +3,6 @@
 %bcond_without	autodeps	# don't BR packages needed only for resolving deps
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	Brackup
 Summary:	Brackup - flexible backup tool: slices, dices, encrypts, and sprays across the net
 Summary(pl.UTF-8):	Brackup - elastyczne narzędzie backupowe: rozdziela, szyfruje i rozprzestrzenia po sieci
